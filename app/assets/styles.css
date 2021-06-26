@@ -33,7 +33,7 @@
   /* BASIC SETUP */
   
   .page-wrapper {
-    width: 60%;
+    width: 1000px;
     height: auto;
     margin: 0 auto;
   }
@@ -83,7 +83,7 @@
   .navbar ul {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(8,1fr);
     justify-self: end;
     place-items: center;
     
@@ -95,12 +95,42 @@
 
   .input-search{
     border: none;
-    border-radius: 6    px;
+    border-radius: 6px;
     height: 40px;
     padding-left: 20px;
     background: #282f35;
     color: white;
     width: 400px;
+  }
+  ul li.nav-item.acceso-pyme{
+    padding-left: 3rem;  
+    grid-column: 6/8;    
+  }
+
+  .acceso-pyme .btn-pyme{
+    background: hsl(345deg 100% 47%);
+    border-radius: 6px;
+    border: none;
+    padding: 0;
+    font-weight: 600;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    font-size: .7rem;
+    text-decoration: none;
+    box-shadow: 0px 4px 0px hsl(340deg 100% 32%);
+    color: white;
+  }
+  
+  .acceso-pyme .btn-pyme:hover{
+    box-shadow: 0px 2px 0px hsl(340deg 100% 32%);
+    transition: all .5s;
+    text-decoration: none;
+    color: none;
+  }
+
+  .btn-pyme:active .btn-pyme:link{
+    color: white;
+    text-decoration: none;
   }
 
   .input-search::placeholder{
@@ -146,6 +176,7 @@
       background: #F5D4C1;
       text-align-last: center;
       padding: 1.5rem 0;
+      cursor: pointer;
   }
 
 .categories .container-cards .category:nth-child(2),
@@ -175,6 +206,7 @@
     background: white;
     border-radius: 10px;
     width: 33.3%;
+    cursor: pointer;
 }
 
 
@@ -193,7 +225,7 @@ p.pyme-address{
     margin-top: 3px;
     font-weight: 400;
 }
-span.pyme-fase{
+span.pyme-fase-1{
     background: #F75C5C;
     text-align: left;
     font-weight: 400;
@@ -204,13 +236,42 @@ span.pyme-fase{
     float: right;
     width: max-content;
 }
+
+span.pyme-fase-2{
+    background: #FFBF00;
+    text-align: left;
+    font-weight: 400;
+    color: white;
+    padding: .2rem 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    float: right;
+    width: max-content;
+}
+
+span.pyme-fase-3{
+    background: #FFF200;
+    text-align: left;
+    font-weight: 400;
+    color: black;
+    padding: .2rem 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    float: right;
+    width: max-content;
+}
+
+span.km{
+    opacity: .5;
+    font-size: .8rem;
+}
 .near img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
 .pyme{
-    padding: 1rem;
+    padding: 1rem 1rem 2rem;
 }
 .info-extra{
     margin-top: 7px;
@@ -401,3 +462,102 @@ span.pyme-fase{
       margin-top: 2rem;
       font-size: .9rem;
   }
+  
+  .main-pyme{
+    margin-top: 30px;
+    display: flex;
+  }
+
+  .main-pyme .title{
+      text-align: left;
+  }
+
+  .main-pyme p{
+    text-align: left;
+    }
+
+  .main-pyme p:not(.main-pyme p:first-child){
+      
+      margin: 1rem 0;
+
+  }
+  .main-pyme .flex-1{
+    width: 50%;
+  }
+
+  .main-pyme p span.fase-1{
+    background: #F75C5C;
+    padding: 0 .5rem;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+
+  .main-pyme p.delivery span{
+      color: white;
+      background: #22a880;
+      padding: .2rem .5rem;
+      border-radius: 5px;
+      font-size: .8rem;
+  }
+  .map{
+      margin-top: .5rem;
+  }
+
+.btn-wsp{
+    background: #4AC959;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0.3rem 1rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 0px green;
+}
+.flex-2{
+    width: 50%;
+    
+}
+
+.flex-2 .flex-img{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.flex-2 img{
+    max-width:50%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.register{
+    margin-top: 3rem;
+    position: relative;
+}
+.register form{
+    position: relative;
+    display: block;
+}
+.register form input, .register select{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    height: 50px;
+    margin-top: 1rem;
+    border-radius: 6px;
+    border: none;
+    padding-left: 1rem;
+    color: white;
+    background: #282f35;
+}
+
+.register form input::placeholder{
+    color: white;
+    opacity: 0.5;
+}
+
+.register p{
+    margin-top: 2rem;
+}
+
+.register p a{
+    color: white;
+}
